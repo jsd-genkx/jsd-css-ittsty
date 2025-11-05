@@ -1,7 +1,7 @@
 /* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Momo+Trust+Display&family=Noto+Sans+Thai:wght@100..900&display=swap");
 
 :root {
 	--color-primary: #0d4663;
@@ -11,11 +11,83 @@
 	--color-black: #111;
 	--color-white: #f5f5f5;
 
-	--font-sans: "Inter";
+	--font-sans: "IBM Plex Sans Thai";
 
 	--nav-height: 64px;
+
+	--bg-primary: rgb(27, 92, 255);
 }
 
 body {
 	font-family: var(--font-sans), serif;
+	background-color: #ffd0d0;
+}
+
+section {
+	text-align: center;
+}
+
+.card {
+	background-color: rgba(255, 255, 255, 0.359);
+	backdrop-filter: blur(20px);
+	border-radius: 28px;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	box-shadow:
+		0 8px 32px rgba(0, 0, 0, 0.1);
+	position: relative;
+
+	width: 350px;
+	aspect-ratio: 1/1.9;
+	padding: 1rem;
+
+	display: inline-flex;
+	flex-direction: column;
+
+	img {
+		width: 100%;
+		aspect-ratio: 1/1;
+		border-radius: 20px;
+	}
+	.optionHolder * {
+		display: inline-block;
+		width: 14px;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		box-shadow: inset rgba(0, 0, 0, 0.293) -1.5px 1.5px;
+		margin-top: 0.5rem;
+	}
+
+	.detail {
+		width: 100%;
+		margin: auto auto 0;
+
+		.itemModify {
+			font-size: 0.75rem;
+			color: rgb(205, 68, 0);
+			font-weight: 500;
+		}
+
+		H1 {
+			font-weight: 600;
+		}
+	}
+
+	button {
+		width: 90px;
+		border-radius: 999rem;
+		padding: 0.4rem;
+		border: none;
+		margin-top: 1rem;
+		font-size: 1rem;
+	}
+
+	.buy {
+		background-color: var(--color-white);
+		color: var(--bg-primary);
+	}
+
+	.moreOption {
+		background-color: var(--bg-primary);
+		color: var(--color-white);
+	}
 }
